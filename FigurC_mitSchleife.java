@@ -3,10 +3,10 @@ import processing.core.PApplet;
 
 /**
  * Klasse figurC_mitSchleife.
- * Beschreibung: Die FigurC aus der vorherigen Aufgabe soll mit einer Zählschleife implementiert werden.
+ * Beschreibung: 
  *
  * @author Simon Gebert 
- * @version Feb2020
+ * @version 1.0 vom 05.02.2020
  */
 public class FigurC_mitSchleife extends PApplet
 {       
@@ -17,12 +17,20 @@ public class FigurC_mitSchleife extends PApplet
     @Override
     public void settings()
     {
-        size(500,350); // Festlegen der Fenstergröße
+        size(100,200); // Festlegen der Fenstergröße
     }        
 
-    public void zeichneBildC() {
+    void zeichneBildC() {
         // ***** hier kommen deine Anweisungen hin ************
-   
+        rect(10,10,80,80);
+        for (int i=0; i<3; i++){
+            ellipse(50,50,70-i*20,70-i*20);
+        }
+
+        ellipse(50,150,80,80);
+        for (int i=0; i<3; i++){
+            rect(25+i*10,125+i*10,50-i*20,50-i*20);
+        }
         // ***** Ende der eigenen Anweisungen **********
     }
 
@@ -36,7 +44,6 @@ public class FigurC_mitSchleife extends PApplet
     {
         zeichneBildC(); // Aufruf deiner Methode
     }
-
 
     /**
      * Mit der main()-Methode wird das Programm gestartet.

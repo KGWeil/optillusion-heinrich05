@@ -3,10 +3,10 @@ import processing.core.PApplet;
 
 /**
  * Klasse Figuren.
- * Beschreibung: Hier sollen mehrere vorgegebene Figuren gezeichnet werden.
+ * Beschreibung: 
  *
  * @author Simon Gebert 
- * @version Feb2020
+ * @version 1.0 vom 05.02.2020
  */
 public class Figuren extends PApplet
 {       
@@ -17,23 +17,33 @@ public class Figuren extends PApplet
     @Override
     public void settings()
     {
-        size(500, 350); // Festlegen der Fenstergröße
+        size(100, 200); // Festlegen der Fenstergröße
     }        
 
-    public void zeichneBildC() {
+    void zeichneBildC() {
         // Zeichne dir zunächst eine Skizze auf ein Blatt Papier und überlege dir, welche
         // Werte du den Methoden rect(x,y,b,h) und ellipse(x,y,b,h) übergeben musst, 
         // dass Bild C gezeichnet wird
 
         // ***** hier kommen deine Anweisungen hin ************
+        rect(10,10,80,80);
+        ellipse(50,50,70,70);
+        ellipse(50,50,50,50);
+        ellipse(50,50,30,30);
 
+        ellipse(50,150,80,80);
+        rect(25,125,50,50);
+        rect(35,135,30,30);
+        rect(45,145,10,10);
         // ***** Ende der eigenen Anweisungen **********
     }
 
     //***** Zusatzaufgabe bzw. Hausaufgabe *************
-    public void zeichneBildA() {
+    void zeichneBildA() {
         // ***** hier kommen deine Anweisungen hin ************
-
+        ellipse(50,40,60,60);
+        rect(20,70,60,60);
+        triangle(20,190,80,190,50,130);
         // ***** Ende der eigenen Anweisungen **********  
     }
 
@@ -45,8 +55,8 @@ public class Figuren extends PApplet
     @Override
     public void setup()
     {
-        zeichneBildC(); // Aufruf deiner Methode
-        // zeichneBildA();
+        //zeichneBildC(); // Aufruf deiner Methode
+         zeichneBildA();
     }
 
     /**
