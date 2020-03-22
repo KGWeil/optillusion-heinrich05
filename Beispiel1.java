@@ -13,14 +13,13 @@ public class Beispiel1 extends PApplet
         zeichneQuadrate(0,0,0);
     }
 
-    int s = 50;
-    int a = 20;
-    //int hex = #1CAF38;
+    int s = 50; //Seitenlänge
+    int a = 20; //Abstand zwischen großem und kleinen Rechteck
 
     int farbwechsel(int farbe){
         int neueFarbe; {
             if (farbe == 255){
-                neueFarbe = 0;
+                neueFarbe = 0; //eigentlich #228B22, BlueJ erkennt aber leider keinen Hex-Code
             } else {
                 neueFarbe = 255;
             }
@@ -35,16 +34,16 @@ public class Beispiel1 extends PApplet
         for (int j=0; j<=11; j++){
             for (int i=0; i<=11; i++){
                 fill(aktuelleFarbe);
-                rect(x+2*i*s,y+j*s,s,s);
+                rect(x+2*i*s,y+j*s,s,s);//erstes großes Quadrat
                 aktuelleFarbe = farbwechsel(aktuelleFarbe);
                 fill(aktuelleFarbe);
-                rect(x+s+2*i*s,y+j*s,s,s);
-                rect(x+2*i*s+a/2,y+j*s+a/2,s-a,s-a);
+                rect(x+s+2*i*s,y+j*s,s,s);//zweites großes Quadrat
+                rect(x+2*i*s+a/2,y+j*s+a/2,s-a,s-a);//erstes kleines Quadrat
                 aktuelleFarbe = farbwechsel(aktuelleFarbe);
                 fill(aktuelleFarbe);
-                rect(x+s+2*i*s+a/2,y+j*s+a/2,s-a,s-a);
+                rect(x+s+2*i*s+a/2,y+j*s+a/2,s-a,s-a);//zweites kleines Quadrat
             }
-            aktuelleFarbe = farbwechsel(aktuelleFarbe);
+            aktuelleFarbe = farbwechsel(aktuelleFarbe);//Verschiebung der Farben für die neue Reihe
         }
     }
 
