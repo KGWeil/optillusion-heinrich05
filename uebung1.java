@@ -46,11 +46,11 @@ public class uebung1 extends PApplet
         int[] farbe = blau;
         boolean erstBlau = true;
 
-        while (y<500){
+        while (y<height){
 
             if (erstBlau == true){
 
-                while(x<500){
+                while(x<width){
                     
                     farbe = blau;
                     viereck(x,y,x+b/2,y+h/2,x+b/2,y+h+h/2,x,y+h,farbe);
@@ -71,7 +71,7 @@ public class uebung1 extends PApplet
             }
             else
             {
-                while(x<500){
+                while(x<width){
                     
                     farbe = gruen;
                     viereck(x,y+h/2,x+b/2,y,x+b/2,y+h,x,y+h+h/2,farbe);
