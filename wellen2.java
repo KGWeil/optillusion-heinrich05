@@ -47,8 +47,8 @@ public class wellen2 extends PApplet
         int x = 0;//x fuer while-Schleife
         int y = 0;//y fuer while-Schleife
         
-        while (y<600){//y-Richtung
-            while (x<600){//x-Richtung
+        while (y<height){//y-Richtung
+            while (x<width){//x-Richtung
                 zeichneQuadrat(x,y,farbe);
                 farbe = farbwechsel(farbe);
                 x = x+s;
