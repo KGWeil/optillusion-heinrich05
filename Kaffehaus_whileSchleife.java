@@ -52,7 +52,7 @@ public class Kaffehaus_whileSchleife extends PApplet
     public void parallelen(){
         stroke(150);//Farbe der Parallelen
         int y = 0;
-        while (y<360){//Zählschleife
+        while (y<height){//Zählschleife
             line(0,y,640,y);//Parallelen
             y = y+s;
         }
@@ -76,9 +76,9 @@ public class Kaffehaus_whileSchleife extends PApplet
     public void zeichneAlleQuadrate(){
         int x = 0;
         int y = 0;
-        while (y<360){
+        while (y<height){
             fill(0);
-            while (x<640){
+            while (x<width){
                 rect(abstaende[y/40]+x,y,s,s);
                 x = x+2*s;
             }
